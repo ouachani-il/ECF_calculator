@@ -25,7 +25,7 @@ function btnClick(event) {
             oper = '';
             boutons[boutons.length -1].disabled = true;
         } else {
-            if ((touche === '+') || (touche === '-') || (touche === 'x') || (touche === '/')) {
+            if ((touche === '+') || (touche === '-') || (touche === 'x') || (touche === '/') || (touche === '%')) {
                 if ( op1 !== ''){
                     oper = '' + touche + '';
                 }
@@ -96,6 +96,10 @@ function effectuerCalcul(operande1, operande2, operateur) {
             resultat = Number(operande1) * Number(operande2);
             break;
         }
+        case "%":{
+            resultat = Number(operande1) % Number(operande2);
+            break;
+        }
         case "/":{
             if (operande2 === "0"){
                 resultat = "ERROR";
@@ -120,7 +124,7 @@ function init() {
     // chaque balise button est dans une div de classe "bouton"
 
     // déclaration d'un tableau des codes de touche
-    let codeTouches = ['C','','','+','7','8','9','-','4','5','6','x','1','2','3','/','0','','','='];
+    let codeTouches = ['C','','%','+','7','8','9','-','4','5','6','x','1','2','3','/','0','','','='];
     // création du html pour l'affichage et les boutons
     let divs = '<div class="resultat"><input type="text" readonly="readonly" value=""/></div>';
     for (let codeTouche of codeTouches) {

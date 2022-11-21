@@ -17,10 +17,13 @@
     width:400px;
     height: 400px;
     margin: 0 auto;
+
 }
 
 .resultat { grid-area: resultat;
-            background-color: #99ffff;
+            background-color: #4a64b9;
+            border-radius: 10px;
+
 }
 
 .bouton1, .bouton2, .bouton3, .bouton4 {
@@ -35,17 +38,22 @@
     margin-top: 2%;
     text-align:right;
     font-size: 2em;
+    border-radius: 10px;
 }
 .bouton button{
     width: 100%;
     height: 100%;
     font-size: 2em;
-
+    border-radius: 15px;
+    background-color: #4886c4;
 }
 
 .calculate {
     border: 2px solid #CCCCCC;
     padding: 4px;
+    background-color: rgb(119, 137, 175);
+    border-radius: 3em;
+    padding : 1.5em
 }
 
 h1, h2 {text-align: center;}
